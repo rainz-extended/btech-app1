@@ -37,5 +37,48 @@ namespace btech_app1
             }
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //username ที่ถูกต้อง
+            string user = "admin";
+            string pass = "1150";
+
+            if (
+                (string.IsNullOrEmpty(InputUsername.Text)) ||
+                (string.IsNullOrEmpty(InputPassword.Text))
+               )
+            {   //เชคกรณีว่าง
+                MessageBox.Show("Please input username or password first");
+            }
+            else
+            {
+                //กรณรีมีค่าปกติต่อไป
+                //เชคความถูกต้องของ user ที่ส่งเข้ามา
+                if ((user == InputUsername.Text) && (pass == InputPassword.Text))
+                {
+                    //ถ้า user และ password ถูกต้องทำไร
+                    lbStatus.Text = "Login successful !!";
+
+                    lbStatus.ForeColor = Color.White;
+                    lbStatus.BackColor = Color.Green;
+                }
+                else 
+                {
+                    //ถ้าผิด โชว์อะไร
+                    MessageBox.Show("input valid username or password ");
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            InputUsername.Text = "";
+            InputPassword.Text = "";
+
+            lbStatus.ForeColor = Color.Black;
+            lbStatus.BackColor = SystemColors.Control;
+            lbStatus.Text = "Please login first";
+        }
     }
 }
