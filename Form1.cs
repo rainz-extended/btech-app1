@@ -105,5 +105,11 @@ namespace btech_app1
                 //ไม่ต้องทำอะไร
             }
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            string text = "hello hi ไทยๆ bro";
+            txtFill.Text = text;
+        }
     }
 }
