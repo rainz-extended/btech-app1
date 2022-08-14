@@ -80,5 +80,30 @@ namespace btech_app1
             lbStatus.BackColor = SystemColors.Control;
             lbStatus.Text = "Please login first";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form2();
+            //fm.Show();
+            fm.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show(
+                "คุณต้องการออกจากโปรแกรม ?",
+                "ออกจากโปรแกรม",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+                );
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else 
+            {
+                //ไม่ต้องทำอะไร
+            }
+        }
     }
 }

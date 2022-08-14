@@ -41,15 +41,22 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.InputPassword = new System.Windows.Forms.TextBox();
+            this.showdialog = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 529);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 366);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(467, 22);
             this.statusStrip1.TabIndex = 0;
@@ -63,7 +70,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(42, 58);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 68);
             this.button1.TabIndex = 1;
@@ -73,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 86);
+            this.button2.Location = new System.Drawing.Point(42, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 45);
             this.button2.TabIndex = 2;
@@ -82,7 +89,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(93, 86);
+            this.button3.Location = new System.Drawing.Point(123, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 45);
             this.button3.TabIndex = 3;
@@ -116,7 +123,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.InputPassword);
             this.groupBox1.Controls.Add(this.InputUsername);
-            this.groupBox1.Location = new System.Drawing.Point(227, 12);
+            this.groupBox1.Location = new System.Drawing.Point(227, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(228, 192);
             this.groupBox1.TabIndex = 6;
@@ -169,17 +176,68 @@
             this.InputPassword.Size = new System.Drawing.Size(128, 23);
             this.InputPassword.TabIndex = 5;
             // 
+            // showdialog
+            // 
+            this.showdialog.Location = new System.Drawing.Point(42, 183);
+            this.showdialog.Name = "showdialog";
+            this.showdialog.Size = new System.Drawing.Size(156, 64);
+            this.showdialog.TabIndex = 7;
+            this.showdialog.Text = "show dialog";
+            this.showdialog.UseVisualStyleBackColor = true;
+            this.showdialog.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(467, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripSeparator1,
+            this.toolStripMenuItem2});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "ตั้งค่า";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "ปิดโปรแกรม";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 551);
+            this.ClientSize = new System.Drawing.Size(467, 388);
+            this.Controls.Add(this.showdialog);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "B_Tech Application 1";
@@ -187,6 +245,8 @@
             this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +267,11 @@
         private Button btnReset;
         private Label label1;
         private TextBox InputPassword;
+        private Button showdialog;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem toolStripMenuItem2;
     }
 }
